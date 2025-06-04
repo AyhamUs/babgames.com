@@ -1,0 +1,54 @@
+{
+  "pages": [
+    {
+      "title": "Remote Support",
+      "buttons": [
+        {
+          "text": "Copy Remote Support PIN Message",
+          "type": "pin_dialog",
+          "message_template": "Open askIT Remote Support on your desktop (the robot icon), then enter this 6-digit PIN: {pin}. If you are prompted for an update, press OK and then restart the application."
+        },
+        {
+          "text": "Copy Connection Prompt",
+          "type": "copy",
+          "message": "Press OK to the next two prompts on your screen so I can control your computer."
+        }
+      ]
+    },
+    {
+      "title": "Acknowledge",
+      "buttons": [
+        {
+          "text": "Copy Acknowledge Message",
+          "type": "copy",
+          "message": "Thank you for contacting askIT, we are sending you this message to let you know we have received your ticket and are working on a solution."
+        },
+        {
+          "text": "Copy Route Message",
+          "type": "copy",
+          "message": "Thank you for contacting askIT. We've received your ticket and routed it to the right group."
+        }
+      ]
+    },
+    {
+      "title": "AD Account Unlock",
+      "buttons": [
+        {
+          "text": "Copy Unlock Message",
+          "type": "copy",
+          "message": "Your account has been unlocked, you may now try signing in again. If you need to reset your password please go to https://aka.ms/sspr"
+        }
+      ]
+    },
+    {
+      "title": "SAP Password Reset",
+      "buttons": [
+        {
+          "text": "Copy Reset Message",
+          "type": "copy",
+          "message": "Your SAP account password has been reset, you may now try signing in again with your new password: today365 -- It will make you set a new password upon signing in."
+        }
+      ]
+    }
+  ]
+}

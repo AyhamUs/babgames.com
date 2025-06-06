@@ -19,10 +19,31 @@
       background: #4a148c;
       color: #fff;
     }
+
     .benefit-icon {
       font-size: 1.5rem;
       margin-right: 0.5rem;
       color: #a855f7;
+    }
+
+    .shine-effect {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(90deg, #ff6a00, #ee0979, #ff6a00);
+      background-size: 200% 100%;
+      background-position: 100% 0;
+      animation: shine 1.5s infinite linear;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
     }
   </style>
 </head>
@@ -38,7 +59,7 @@
         <ul class="flex space-x-6 text-gray-300">
           <li><a href="/" class="hover:text-purple-400">Home</a></li>
           <li><a href="/donate.html" class="hover:text-purple-400 text-purple-400 font-semibold">Donate</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#example" class="hover:text-purple-400">Contact</a></li>
+          <li><a href="mailto:babgames@usa.com" class="hover:text-purple-400">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -64,14 +85,13 @@
 
     <!-- Donation Options -->
     <section class="max-w-2xl mx-auto text-center">
-      <h3 class="text-2xl font-bold text-white mb-6">Choose a Donation Method</h3>
+      <h3 class="text-2xl font-bold text-white mb-6">Donate via Venmo</h3>
 
-      <!-- PayPal -->
-      <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_ID_HERE" target="_blank" class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-300 transition mb-4">
-        <i class="bi bi-paypal mr-2"></i> Donate via PayPal
-      </a>
+      <div class="inline-block bg-white text-purple-800 font-semibold px-6 py-3 rounded-full shadow-md mb-4">
+        <i class="bi bi-qr-code-scan mr-2"></i> @ayhamissa
+      </div>
 
-      <div class="text-sm text-gray-400 mt-4">More methods coming soon!</div>
+      <p class="text-sm text-gray-300 mt-4">Open Venmo and search <strong>@ayhamissa</strong> to donate. Thank you for your support!</p>
     </section>
   </main>
 

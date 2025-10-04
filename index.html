@@ -60,57 +60,6 @@
         .bounce-slow { animation: bounce 2s infinite; }
         .glow { box-shadow: 0 0 20px rgba(103, 126, 234, 0.5); }
         .text-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Hero animations */
-        .float-animation { animation: float 6s ease-in-out infinite; }
-        .slide-up { animation: slideUp 1s ease-out forwards; opacity: 0; }
-        .slide-up-delay { animation: slideUp 1s ease-out 0.3s forwards; opacity: 0; }
-        .slide-up-delay-2 { animation: slideUp 1s ease-out 0.6s forwards; opacity: 0; }
-        .scale-in { animation: scaleIn 0.8s ease-out 0.9s forwards; opacity: 0; transform: scale(0.8); }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        
-        .hero-bg-animate {
-            background: linear-gradient(-45deg, #667eea, #764ba2, #5a67d8, #6b46c1);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .typing-animation { 
-            overflow: hidden;
-            border-right: 3px solid #fff;
-            white-space: nowrap;
-            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #fff; }
-        }
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen">
@@ -153,248 +102,42 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg-animate py-24 relative overflow-hidden min-h-screen flex items-center">
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-        
-        <!-- Floating particles -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 left-10 w-4 h-4 bg-white bg-opacity-30 rounded-full float-animation"></div>
-            <div class="absolute top-40 right-20 w-6 h-6 bg-white bg-opacity-20 rounded-full float-animation" style="animation-delay: -2s;"></div>
-            <div class="absolute bottom-32 left-1/4 w-3 h-3 bg-white bg-opacity-40 rounded-full float-animation" style="animation-delay: -4s;"></div>
-            <div class="absolute top-60 right-1/3 w-5 h-5 bg-white bg-opacity-25 rounded-full float-animation" style="animation-delay: -1s;"></div>
-            <div class="absolute bottom-20 right-10 w-8 h-8 bg-white bg-opacity-15 rounded-full float-animation" style="animation-delay: -3s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <div class="max-w-5xl mx-auto">
-                <!-- Logo and main title -->
-                <div class="slide-up mb-8">
-                    <div class="flex items-center justify-center mb-6">
-                        <div class="text-6xl md:text-8xl font-black text-white">
-                            Bab Games
-                        </div>
+    <section class="gradient-bg py-16 text-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Bab Games
+                </h1>
+                <p class="text-lg md:text-xl text-white mb-8">
+                    Free Unblocked Games - Play Instantly!
+                </p>
+                <div class="max-w-md mx-auto">
+                    <div class="relative">
+                        <input type="text" id="gameSearch" placeholder="Search games..." class="w-full px-6 py-3 rounded-full bg-white bg-opacity-90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:bg-white text-center">
+                        <i class="bi bi-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
                     </div>
                 </div>
-                
-                <!-- Subtitle with typing effect -->
-                <div class="slide-up-delay mb-8">
-                    <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
-                        <span class="typing-animation inline-block">Free Unblocked Games!</span>
-                    </h2>
-                </div>
-                
-                <!-- Description -->
-                <div class="slide-up-delay-2 mb-12">
-                    <p class="text-lg md:text-xl text-white mb-6 leading-relaxed max-w-3xl mx-auto">
-                        🚀 The ultimate destination for <strong class="text-yellow-300">free unblocked games</strong>! 
-                        Play your favorite games at school, work, or anywhere. No downloads, no registration - just pure gaming fun!
-                    </p>
-                    
-                    <!-- Features badges -->
-                    <div class="flex flex-wrap justify-center gap-4 mb-8">
-                        <span class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-semibold">
-                            <i class="bi bi-unlock-fill mr-2"></i>100% Unblocked
-                        </span>
-                        <span class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-semibold">
-                            <i class="bi bi-gift-fill mr-2"></i>Completely Free
-                        </span>
-                        <span class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-semibold">
-                            <i class="bi bi-lightning-charge-fill mr-2"></i>Instant Play
-                        </span>
-                    </div>
-                </div>
-                
-                <!-- CTA Buttons -->
-                <div class="scale-in">
-                    <div class="flex justify-center">
-                        <a href="#games" class="group bg-white text-purple-600 px-12 py-6 rounded-full font-bold text-2xl hover:bg-yellow-300 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105">
-                            <i class="bi bi-play-fill mr-3 group-hover:animate-pulse"></i>
-                            🎯 Play Now - It's Free!
-                        </a>
-                    </div>
-                </div>
-                
-
             </div>
         </div>
-        
-        <!-- Decorative gradient orbs -->
-        <div class="absolute top-32 left-20 w-64 h-64 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-3xl float-animation"></div>
-        <div class="absolute bottom-32 right-20 w-80 h-80 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-15 blur-3xl float-animation" style="animation-delay: -3s;"></div>
     </section>
 
     <!-- Games Section -->
     <section id="games" class="py-16 bg-gray-900">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Our Unblocked Games Collection</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Discover our amazing collection of <strong>unblocked games</strong> that you can play anywhere! 
-                    From puzzle games to action-packed adventures - we have something for everyone.
-                </p>
-            </div>
-            
             <!-- Games Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 
-                <!-- Game Card: 2048 -->
+                <!-- CLASSIC GAMES -->
+                <!-- Game Card: Tetris -->
                 <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/2048" class="block">
+                    <a href="/tetris" class="block">
                         <div class="flex items-center mb-4">
-                            <img src="images/2048.jpg" alt="2048 Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Tetris_logo.png" alt="Tetris Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
                             <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">2048</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Popular Puzzle Game</span>
-                                </div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Tetris</h3>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-4">Combine numbered tiles to reach 2048! A addictive puzzle game that challenges your strategic thinking.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Game Card: Retrobowl -->
-                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/Retrobowl" class="block">
-                        <div class="flex items-center mb-4">
-                            <img src="images/retrobowl.jpg" alt="Retrobowl Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
-                            <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">Retrobowl</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Sports Game</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">Experience retro-style American football! Manage your team and lead them to victory in this nostalgic sports game.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Game Card: Cookie Clicker -->
-                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/CookieClicker" class="block">
-                        <div class="flex items-center mb-4">
-                            <img src="images/cookie-clicker.jpg" alt="Cookie Clicker Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
-                            <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">Cookie Clicker</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Incremental Game</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">Click cookies and build your bakery empire! The most addictive idle clicker game you'll ever play.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Game Card: Block Blast -->
-                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/blockblast" class="block">
-                        <div class="flex items-center mb-4">
-                            <img src="images/block-blast.jpg" alt="Block Blast Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
-                            <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">Block Blast</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Puzzle Strategy</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">Strategic block placement puzzle! Clear lines and score points in this engaging Tetris-style game.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Game Card: Slope -->
-                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/Slope" class="block">
-                        <div class="flex items-center mb-4">
-                            <img src="images/slope.jpg" alt="Slope Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
-                            <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">Slope</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Endless Runner</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">Roll down the slope at incredible speeds! Test your reflexes in this fast-paced endless running game.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Game Card: 1v1.lol -->
-                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/1v1lol" class="block">
-                        <div class="flex items-center mb-4">
-                            <img src="images/1v1lol.jpg" alt="1v1.lol Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
-                            <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">1v1.lol</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Battle Royale</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">Build, shoot, and outlast your opponents! The ultimate building and shooting battle royale experience.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Game Card: SnowRider 3D -->
-                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
-                    <a href="/snowrider" class="block">
-                        <div class="flex items-center mb-4">
-                            <img src="snowrider/snow-rider-3d.png" alt="Snowrider 3D Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
-                            <div>
-                                <h3 class="text-xl font-bold text-purple-400 mb-1">Snowrider 3D</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>3D Racing</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">Slide down snowy mountains in 3D! Navigate through obstacles and enjoy the winter wonderland.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
-                        </div>
+                        <p class="text-gray-300 mb-4">The legendary falling block puzzle game! Arrange tetrominoes to clear lines and achieve the highest score in this timeless classic.</p>
                     </a>
                 </div>
 
@@ -402,22 +145,79 @@
                 <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
                     <a href="/flappy-bird" class="block">
                         <div class="flex items-center mb-4">
-                            <img src="images/flappy-bird.jpg" alt="Flappy Bird Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <img src="images/flappy-bird.jpg" alt="Flappy Bird Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
                             <div>
                                 <h3 class="text-xl font-bold text-purple-400 mb-1">Flappy Bird</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Classic Arcade</span>
-                                </div>
                             </div>
                         </div>
                         <p class="text-gray-300 mb-4">The legendary mobile game returns! Tap to fly and avoid pipes in this challenging arcade classic.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
+                    </a>
+                </div>
+
+                <!-- Game Card: Chrome Dinosaur -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/chromedinosaurgame" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.seeklogo.com/logo-png/47/1/dinosaur-game-logo-png_seeklogo-473669.png" alt="Chrome Dinosaur Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Chrome Dinosaur</h3>
+                            </div>
                         </div>
+                        <p class="text-gray-300 mb-4">Jump over cacti and dodge obstacles in Google's famous offline dinosaur game! How far can you run in this endless runner?</p>
+                    </a>
+                </div>
+
+                <!-- PUZZLE GAMES -->
+                <!-- Game Card: 2048 -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/2048" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="images/2048.jpg" alt="2048 Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">2048</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Combine numbered tiles to reach 2048! A addictive puzzle game that challenges your strategic thinking.</p>
+                    </a>
+                </div>
+
+                <!-- Game Card: Block Blast -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/blockblast" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="images/block-blast.jpg" alt="Block Blast Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Block Blast</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Strategic block placement puzzle! Clear lines and score points in this engaging Tetris-style game.</p>
+                    </a>
+                </div>
+
+                <!-- Game Card: Traffic Escape -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/trafficescape" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/c19ce0d222e6de758222c532856bb56f/traffic-escape.png" alt="Traffic Escape Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Traffic Escape</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Control traffic flow and help cars escape safely! Solve challenging traffic puzzle scenarios in this engaging strategy game.</p>
+                    </a>
+                </div>
+
+                <!-- SPORTS GAMES -->
+                <!-- Game Card: Retrobowl -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/Retrobowl" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="images/retrobowl.jpg" alt="Retrobowl Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Retrobowl</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Experience retro-style American football! Manage your team and lead them to victory in this nostalgic sports game.</p>
                     </a>
                 </div>
 
@@ -425,22 +225,26 @@
                 <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
                     <a href="/basketball-legends" class="block">
                         <div class="flex items-center mb-4">
-                            <img src="images/basketball-legends.jpg" alt="Basketball Legends Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <img src="images/basketball-legends.jpg" alt="Basketball Legends Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
                             <div>
                                 <h3 class="text-xl font-bold text-purple-400 mb-1">Basketball Legends</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>2-Player Sports</span>
-                                </div>
                             </div>
                         </div>
                         <p class="text-gray-300 mb-4">Play basketball with legendary players! Challenge friends in this exciting 2-player basketball game.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
+                    </a>
+                </div>
+
+                <!-- ACTION & ADVENTURE GAMES -->
+                <!-- Game Card: 1v1.lol -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/1v1lol" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="images/1v1lol.jpg" alt="1v1.lol Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">1v1.lol</h3>
+                            </div>
                         </div>
+                        <p class="text-gray-300 mb-4">Build, shoot, and outlast your opponents! The ultimate building and shooting battle royale experience.</p>
                     </a>
                 </div>
 
@@ -448,22 +252,66 @@
                 <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
                     <a href="/geometrydash" class="block">
                         <div class="flex items-center mb-4">
-                            <img src="images/geometry-dash.jpg" alt="Geometry Dash Unblocked Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <img src="images/geometry-dash.jpg" alt="Geometry Dash Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
                             <div>
                                 <h3 class="text-xl font-bold text-purple-400 mb-1">Geometry Dash</h3>
-                                <div class="flex items-center text-yellow-400 text-sm">
-                                    <i class="bi bi-star-fill mr-1"></i>
-                                    <span>Rhythm Platformer</span>
-                                </div>
                             </div>
                         </div>
                         <p class="text-gray-300 mb-4">Jump and fly through geometric obstacles! A challenging rhythm-based platformer with amazing music.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                <i class="bi bi-unlock mr-1"></i>Unblocked
-                            </span>
-                            <span class="text-purple-400 font-semibold">Play Free →</span>
+                    </a>
+                </div>
+
+                <!-- RACING & ENDLESS RUNNERS -->
+                <!-- Game Card: Slope -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/Slope" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="images/slope.jpg" alt="Slope Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Slope</h3>
+                            </div>
                         </div>
+                        <p class="text-gray-300 mb-4">Roll down the slope at incredible speeds! Test your reflexes in this fast-paced endless running game.</p>
+                    </a>
+                </div>
+
+                <!-- Game Card: Crossy Road -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/crossyroad" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jim-nielsen.com/ios/512/crossy-road-2022-05-13.png?rf=1024" alt="Crossy Road Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Crossy Road</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Navigate through traffic and obstacles in this endless arcade hopper. Cross roads, dodge cars, and go as far as you can!</p>
+                    </a>
+                </div>
+
+                <!-- Game Card: SnowRider 3D -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/snowrider" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="snowrider/snow-rider-3d.png" alt="Snowrider 3D Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Snowrider 3D</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Slide down snowy mountains in 3D! Navigate through obstacles and enjoy the winter wonderland.</p>
+                    </a>
+                </div>
+
+                <!-- IDLE & CLICKER GAMES -->
+                <!-- Game Card: Cookie Clicker -->
+                <div class="game-card bg-gray-800 rounded-xl shadow-lg p-6 card-hover border border-gray-700">
+                    <a href="/CookieClicker" class="block">
+                        <div class="flex items-center mb-4">
+                            <img src="images/cookie-clicker.jpg" alt="Cookie Clicker Game" class="w-16 h-16 rounded-lg mr-4 object-cover" />
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-400 mb-1">Cookie Clicker</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Click cookies and build your bakery empire! The most addictive idle clicker game you'll ever play.</p>
                     </a>
                 </div>
 
@@ -488,101 +336,78 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-12 border-t border-gray-700">
+    <footer class="bg-gray-800 text-gray-300 py-12 border-t border-gray-700">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                            <i class="bi bi-controller text-white text-xl"></i>
-                        </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Footer Logo and About -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://babgames.com/bablogo.png" alt="Bab Games Logo" class="w-10 h-10 rounded-lg">
                         <h3 class="text-xl font-bold text-gradient">Bab Games</h3>
                     </div>
-                    <p class="text-gray-400 mb-4">The ultimate destination for free unblocked games online. Play anywhere, anytime!</p>
-                    <p class="text-sm text-gray-500">© 2025 babgames.com - All rights reserved</p>
+                    <p class="text-gray-400">
+                        Your ultimate destination for free unblocked games. Play anywhere, anytime - no downloads required!
+                    </p>
                 </div>
+                
+                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Popular Games</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/2048" class="hover:text-white transition-colors">2048 Unblocked</a></li>
-                        <li><a href="/Slope" class="hover:text-white transition-colors">Slope Game</a></li>
-                        <li><a href="/geometrydash" class="hover:text-white transition-colors">Geometry Dash</a></li>
-                        <li><a href="/1v1lol" class="hover:text-white transition-colors">1v1.lol</a></li>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#games" class="text-gray-400 hover:text-white transition-colors">All Games</a></li>
+                        <li><a href="mailto:babgames@usa.com" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
                     </ul>
                 </div>
+                
+                <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Categories</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#puzzle" class="hover:text-white transition-colors">Puzzle Games</a></li>
-                        <li><a href="#action" class="hover:text-white transition-colors">Action Games</a></li>
-                        <li><a href="#sports" class="hover:text-white transition-colors">Sports Games</a></li>
-                        <li><a href="#arcade" class="hover:text-white transition-colors">Arcade Games</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="mailto:babgames@usa.com" class="hover:text-white transition-colors">babgames@usa.com</a></li>
-                        <li><a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#terms" class="hover:text-white transition-colors">Terms of Service</a></li>
-                    </ul>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2">
+                        <a href="mailto:babgames@usa.com" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-envelope mr-2"></i>
+                            babgames@usa.com
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    <strong>babgames.com</strong> - Your #1 source for free unblocked games online. 
-                    Play instantly without downloads or registration!
-                </p>
+            
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Bab Games. All rights reserved. | Free Unblocked Games Online</p>
             </div>
         </div>
     </footer>
 
-    <!-- Smooth scrolling script -->
+    <!-- JavaScript -->
     <script>
         // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                
-                // Change hamburger icon to X when open
-                const icon = mobileMenuButton.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.className = 'bi bi-list text-2xl';
-                } else {
-                    icon.className = 'bi bi-x-lg text-2xl';
-                }
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    icon.className = 'bi bi-list text-2xl';
-                }
-            });
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add loading animation to game cards
+        // Search functionality
         document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('gameSearch');
             const gameCards = document.querySelectorAll('.game-card');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                gameCards.forEach(card => {
+                    const gameName = card.querySelector('h3').textContent.toLowerCase();
+                    const gameDescription = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (gameName.includes(searchTerm) || gameDescription.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Animate game cards on page load
             gameCards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
